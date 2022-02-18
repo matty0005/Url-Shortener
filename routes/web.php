@@ -19,9 +19,8 @@ Route::get('/', function () {
     return Redirect::to("https://matthewgilpin.com");
 });
 
-Route::get('/shorten', function () {
-    return view('welcome');
-});
 
 Route::get('/shorten', [CreateShortURLController:: class, 'index']);
+Route::post('/shorten/me', [CreateShortURLController:: class, 'update'])->name('shorten');
+Route::post('/shorten', [CreateShortURLController:: class, 'store']);
 Route::get('/s/{shortURLKey}', '\AshAllenDesign\ShortURL\Controllers\ShortURLController');
