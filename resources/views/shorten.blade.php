@@ -46,7 +46,7 @@
                         {{$shortURL}}
 
                     </div>
-                    <button value="copy" onclick="copyToClipboard('copy_{{ $shortURL }}')">Copy</button>
+                    <button value="copy" onclick="copyToClipboard('{{ $shortURL }}')">Copy</button>
                 </div>
                 @endif
             </div>
